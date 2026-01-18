@@ -29,19 +29,19 @@ resource "google_firebase_hosting_site" "site" {
 
 # Custom domains for Firebase Hosting
 resource "google_firebase_hosting_custom_domain" "root" {
-  provider     = google-beta
-  project      = var.google_project_id
-  site_id      = google_firebase_hosting_site.site.site_id
-  custom_domain = "kattakath.com"
+  provider              = google-beta
+  project               = var.google_project_id
+  site_id               = google_firebase_hosting_site.site.site_id
+  custom_domain         = "kattakath.com"
   wait_dns_verification = false
 }
 
 resource "google_firebase_hosting_custom_domain" "www" {
-  provider     = google-beta
-  project      = var.google_project_id
-  site_id      = google_firebase_hosting_site.site.site_id
-  custom_domain = "www.kattakath.com"
-  redirect_target = "kattakath.com"
+  provider              = google-beta
+  project               = var.google_project_id
+  site_id               = google_firebase_hosting_site.site.site_id
+  custom_domain         = "www.kattakath.com"
+  redirect_target       = "kattakath.com"
   wait_dns_verification = false
 }
 
