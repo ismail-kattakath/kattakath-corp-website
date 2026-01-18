@@ -31,9 +31,9 @@
   },
   "fonts": {
     "font_family": {
-      "primary": "Inter:wght@400;500;600",
+      "primary": "Google+Sans:wght@400;500;600",
       "primary_type": "sans-serif",
-      "secondary": "Inter:wght@600;700",
+      "secondary": "Google+Sans:wght@600;700",
       "secondary_type": "sans-serif"
     },
     "font_size": {
