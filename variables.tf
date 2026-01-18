@@ -12,7 +12,7 @@ variable "cloudflare_api_token" {
 variable "google_project_id" {
   description = "Google Cloud Project ID"
   type        = string
-  default     = "709817050082"
+  default     = "corp-core-hub"
 }
 
 variable "domain" {

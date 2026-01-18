@@ -65,7 +65,7 @@ Required secrets in repository settings:
 
 ### Terraform Cloud Variables
 
-Workspace: `kattakath-com`
+Workspace: `corp-website`
 
 **Environment Variables**:
 - `GOOGLE_CREDENTIALS`: GCP service account JSON (sensitive)
@@ -78,7 +78,7 @@ Workspace: `kattakath-com`
 
 ### Service Account Permissions
 
-**Service Account**: `terraform-cloud-automation@kattakath-technologies-inc.iam.gserviceaccount.com`
+**Service Account**: `terraform-cloud-automation@corp-core-hub.iam.gserviceaccount.com`
 
 **IAM Roles**:
 - `roles/firebasehosting.admin` - Manage Firebase Hosting sites and domains
@@ -174,7 +174,7 @@ If auto-apply causes issues:
 
 ### Terraform Cloud
 
-- **View runs**: https://app.terraform.io/app/kattakath-technologies-inc/workspaces/kattakath-com/runs
+- **View runs**: https://app.terraform.io/app/kattakath-technologies-inc/workspaces/corp-website/runs
 - **State history**: Workspace → States tab
 - **Notifications** (optional):
   - Slack integration
@@ -262,7 +262,7 @@ git commit -m "fix: format terraform files"
 ```bash
 # Regenerate service account key
 gcloud iam service-accounts keys create new-key.json \
-  --iam-account=terraform-cloud-automation@kattakath-technologies-inc.iam.gserviceaccount.com
+  --iam-account=terraform-cloud-automation@corp-core-hub.iam.gserviceaccount.com
 
 # Update in Terraform Cloud (see Service Account section)
 ```
@@ -287,7 +287,7 @@ Rotate service account keys every 90 days:
 ```bash
 # 1. Create new key
 gcloud iam service-accounts keys create rotated-key.json \
-  --iam-account=terraform-cloud-automation@kattakath-technologies-inc.iam.gserviceaccount.com
+  --iam-account=terraform-cloud-automation@corp-core-hub.iam.gserviceaccount.com
 
 # 2. Update Terraform Cloud variable
 # (Use upload-creds.py script or manual UI update)
@@ -296,11 +296,11 @@ gcloud iam service-accounts keys create rotated-key.json \
 
 # 4. Delete old key
 gcloud iam service-accounts keys delete OLD_KEY_ID \
-  --iam-account=terraform-cloud-automation@kattakath-technologies-inc.iam.gserviceaccount.com
+  --iam-account=terraform-cloud-automation@corp-core-hub.iam.gserviceaccount.com
 
 # 5. Verify
 gcloud iam service-accounts keys list \
-  --iam-account=terraform-cloud-automation@kattakath-technologies-inc.iam.gserviceaccount.com
+  --iam-account=terraform-cloud-automation@corp-core-hub.iam.gserviceaccount.com
 ```
 
 ### Audit Trail
@@ -359,9 +359,9 @@ For visual changes:
 
 ```
 Organization: kattakath-technologies-inc
-└── Project: enterprise-core
-    ├── Workspace: kattakath-com-staging (auto-apply on develop branch)
-    ├── Workspace: kattakath-com-production (auto-apply on main branch)
+└── Project: corp-core-hub
+    ├── Workspace: corp-website-staging (auto-apply on develop branch)
+    ├── Workspace: corp-website (auto-apply on main branch)
     └── Workspace: dns-management (shared)
 ```
 

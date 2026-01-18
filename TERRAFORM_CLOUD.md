@@ -19,7 +19,7 @@ Organization: kattakath-technologies-inc
 
 ### Projects
 
-- **enterprise-core** (prj-SzLuA24BUgWjWooU)
+- **corp-core-hub** (prj-SzLuA24BUgWjWooU)
   - **Purpose**: Core infrastructure for Kattakath Technologies Inc
   - **Scope**: Websites, DNS management, shared services
   - **Strategy**: Centralized management of common resources
@@ -36,7 +36,7 @@ Organization: kattakath-technologies-inc
 | `cloudflare_zone_id` | Terraform | No | 6e28971881e488941d052bbbf50d69cd |
 | `cloudflare_api_token` | Terraform | Yes | (hidden) |
 
-**Scope**: **Project-level** (`enterprise-core`) - Shared across ALL workspaces in the project
+**Scope**: **Project-level** (`corp-core-hub`) - Shared across ALL workspaces in the project
 
 **Rationale**: DNS management is centralized; multiple workspaces may need Cloudflare access (e.g., website workspaces, dedicated DNS workspace)
 
@@ -45,10 +45,10 @@ Organization: kattakath-technologies-inc
 
 | Variable | Type | Sensitive | Value |
 |----------|------|-----------|-------|
-| `google_project_id` | Terraform | No | 709817050082 |
+| `google_project_id` | Terraform | No | corp-core-hub |
 | `domain` | Terraform | No | kattakath.com |
 
-**Scope**: **Project-level** (`enterprise-core`) - Shared across ALL workspaces in the project
+**Scope**: **Project-level** (`corp-core-hub`) - Shared across ALL workspaces in the project
 
 **Rationale**: Currently website-specific but can be shared if you add more Firebase-based workspaces (e.g., mobile apps, additional sites) to local credentials
 

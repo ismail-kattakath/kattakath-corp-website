@@ -6,7 +6,7 @@ cloudflare_zone_id   = "your-cloudflare-zone-id-here"
 cloudflare_api_token = "your-cloudflare-api-token-here"
 
 # Google Cloud Configuration (optional override)
-# google_project_id = "709817050082"
+# google_project_id = "corp-core-hub"
 
 # Domain Configuration (optional override)
 # domain = "kattakath.com"
