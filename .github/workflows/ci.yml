@@ -6,6 +6,11 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: read
+  pull-requests: write
+  security-events: write
+
 env:
   NODE_VERSION: '20.x'
   TERRAFORM_VERSION: '1.5.7'
