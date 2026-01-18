@@ -44,6 +44,11 @@
     "gtm_id": "GTM-XXXXXX"
   },
 
+  "google_analytics": {
+    "enable": true,
+    "measurement_id": "G-96546S18GY"
+  },
+
   "disqus": {
     "enable": true,
     "shortname": "themefisher-template",
