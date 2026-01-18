@@ -1,16 +1,16 @@
 ---
-import config from "@/config/config.json";
 import Base from "@/layouts/Base.astro";
 import { getListPage } from "@/lib/contentParser.astro";
 import PageHeader from "@/partials/PageHeader.astro";
 
 const contactIndex = await getListPage("contact", "-index");
-const { contact_form_action }: { contact_form_action: string } = config.params;
 const { title, description, meta_title, image } = contactIndex.data;
 
 if (contactIndex.data.draft) {
   return Astro.redirect("/404");
 }
+
+const contactEmail = "ismail@kattakath.com";
 ---
 
 <Base
@@ -24,7 +24,11 @@ if (contactIndex.data.draft) {
     <div class="container">
       <div class="row">
         <div class="mx-auto md:col-10 lg:col-6">
-          <form action={contact_form_action} method="POST">
+          <form id="contact-form" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="contact" />
+            <p class="hidden">
+              <label>Don't fill this out if you're human: <input name="bot-field" /></label>
+            </p>
             <div class="mb-6">
               <label for="name" class="form-label">
                 Full Name <span class="text-red-500">*</span>
@@ -33,40 +37,72 @@ if (contactIndex.data.draft) {
                 id="name"
                 name="name"
                 class="form-input"
-                placeholder="John Doe"
+                placeholder="Your name"
                 type="text"
                 required
               />
             </div>
             <div class="mb-6">
               <label for="email" class="form-label">
-                Working Mail <span class="text-red-500">*</span>
+                Email <span class="text-red-500">*</span>
               </label>
               <input
                 id="email"
                 name="email"
                 class="form-input"
-                placeholder="john.doe@email.com"
+                placeholder="you@company.com"
                 type="email"
                 required
               />
             </div>
             <div class="mb-6">
               <label for="message" class="form-label">
-                Anything else? <span class="text-red-500">*</span>
+                Message <span class="text-red-500">*</span>
               </label>
               <textarea
                 id="message"
                 name="message"
                 class="form-input"
-                placeholder="Message goes here..."
+                placeholder="How can we help?"
                 required
                 rows="8"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Send Message</button>
           </form>
+          
+          <div class="mt-8 pt-8 border-t border-border dark:border-darkmode-border">
+            <p class="text-sm text-text-light dark:text-darkmode-text-light">
+              Prefer email? Reach out directly at{" "}
+              <a href={`mailto:${contactEmail}`} class="text-primary hover:underline">
+                {contactEmail}
+              </a>
+            </p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 </Base>
+
+<script define:vars={{ contactEmail }}>
+  // Fallback for non-Netlify deployments: convert form submission to mailto
+  document.getElementById('contact-form')?.addEventListener('submit', function(e) {
+    // Check if we're on Netlify by looking for the Netlify form handler
+    const isNetlify = window.location.hostname.includes('netlify') || 
+                      document.querySelector('input[name="form-name"]')?.form?.action?.includes('netlify');
+    
+    // If not on Netlify and form would fail, use mailto fallback
+    if (!isNetlify && !this.action.includes('netlify')) {
+      e.preventDefault();
+      
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      
+      const subject = encodeURIComponent(`Contact from ${name}`);
+      const body = encodeURIComponent(`From: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+      
+      window.location.href = `mailto:${contactEmail}?subject=${subject}&body=${body}`;
+    }
+  });
+</script>

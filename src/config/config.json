@@ -1,15 +1,15 @@
 {
   "site": {
-    "title": "Astroplate",
-    "base_url": "https://astroplate.netlify.app",
+    "title": "Kattakath Technologies Inc. — AI Resume Builder",
+    "base_url": "https://kattakath.com",
     "base_path": "/",
     "trailing_slash": false,
     "favicon": "/images/favicon.png",
     "logo": "/images/logo.png",
     "logo_darkmode": "/images/logo-darkmode.png",
-    "logo_width": "150",
-    "logo_height": "30",
-    "logo_text": "Astroplate"
+    "logo_width": "200",
+    "logo_height": "40",
+    "logo_text": "Kattakath Technologies"
   },
 
   "settings": {
@@ -17,26 +17,26 @@
     "sticky_header": true,
     "theme_switcher": true,
     "default_theme": "system",
-    "pagination": 2,
+    "pagination": 6,
     "summary_length": 200,
     "blog_folder": "blog"
   },
 
   "announcement": {
     "enable": true,
-    "content": "<span class='text-center block'>♥️ Loving Astroplate? <a class='underline' href='https://github.com/zeon-studio/astroplate' target='_blank' rel='noopener'>Please ⭐️ on Github</a></span>",
-    "expire_days": 7
+    "content": "🤖 AI-First Startup — <a href='https://ismail.kattakath.com/resume/builder' class='underline font-semibold'>Try AI Resume Builder free →</a>",
+    "expire_days": 30
   },
 
   "params": {
     "contact_form_action": "#",
-    "copyright": "Designed And Developed by [Zeon Studio](https://zeon.studio)"
+    "copyright": "© 2026 Kattakath Technologies Inc. All rights reserved."
   },
 
   "navigation_button": {
     "enable": true,
-    "label": "Get Started",
-    "link": "https://github.com/zeon-studio/astroplate"
+    "label": "Try AI Demo",
+    "link": "https://ismail.kattakath.com/resume/builder"
   },
 
   "google_tag_manager": {
@@ -45,19 +45,19 @@
   },
 
   "google_analytics": {
-    "enable": true,
-    "measurement_id": "G-96546S18GY"
+    "enable": false,
+    "measurement_id": ""
   },
 
   "disqus": {
-    "enable": true,
-    "shortname": "themefisher-template",
+    "enable": false,
+    "shortname": "",
     "settings": {}
   },
 
   "metadata": {
-    "meta_author": "zeon.studio",
+    "meta_author": "Kattakath Technologies Inc.",
     "meta_image": "/images/og-image.png",
-    "meta_description": "astro and tailwind boilerplate"
+    "meta_description": "AI-first startup building generative AI career tools. Our flagship AI Resume Builder uses LLMs to create tailored resumes and cover letters. Built on Google Cloud."
   }
 }

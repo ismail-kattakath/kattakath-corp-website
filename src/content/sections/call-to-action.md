@@ -1,10 +1,10 @@
 ---
 enable: true
-title: "Ready to build your next project with Astro?"
+title: "Let AI Write Your Resume"
 image: "/images/call-to-action.png"
-description: "Experience the future of web development with Astroplate and Astro. Build lightning-fast static sites with ease and flexibility."
+description: "Connect GPT-4, Claude, or Gemini to generate tailored resumes in seconds. Privacy-first: your data never leaves your device. Open-source, free forever."
 button:
   enable: true
-  label: "Get Started Now"
-  link: "https://github.com/zeon-studio/astroplate"
+  label: "Launch AI Resume Builder"
+  link: "https://ismail.kattakath.com/resume/builder"
 ---
