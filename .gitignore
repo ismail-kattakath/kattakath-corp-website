@@ -50,3 +50,6 @@ gcp-terraform-sa.json
 *-sa.json
 *.key.json
 upload-creds.py
+
+# Firebase
+.firebase/
