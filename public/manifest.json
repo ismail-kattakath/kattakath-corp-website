@@ -1,6 +1,6 @@
 {
-  "name": "MyWebSite",
-  "short_name": "MySite",
+  "name": "Kattakath Inc.",
+  "short_name": "Kattakath",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
