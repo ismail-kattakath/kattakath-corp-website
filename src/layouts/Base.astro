@@ -185,17 +185,13 @@ const { title, meta_title, description, image, noindex, canonical } =
     <!-- og-image -->
     <meta
       property="og:image"
-      content={`${config.site.base_url}${
-        image ? image : config.metadata.meta_image
-      }`}
+      content={`${config.site.base_url}/api/og-image?title=${encodeURIComponent(meta_title ? meta_title : title ? title : config.site.title)}&desc=${encodeURIComponent(description ? description : config.metadata.meta_description)}`}
     />
 
     <!-- twitter-image -->
     <meta
       name="twitter:image"
-      content={`${config.site.base_url}${
-        image ? image : config.metadata.meta_image
-      }`}
+      content={`${config.site.base_url}/api/og-image?title=${encodeURIComponent(meta_title ? meta_title : title ? title : config.site.title)}&desc=${encodeURIComponent(description ? description : config.metadata.meta_description)}`}
     />
     <meta name="twitter:card" content="summary_large_image" />
   </head>
