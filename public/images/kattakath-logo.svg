@@ -4,40 +4,18 @@
 <svg
    version="1.1"
    id="svg1"
-   width="154"
-   height="28"
-   viewBox="0 0 154 28"
-   sodipodi:docname="logo.svg"
-   inkscape:version="1.4.3 (0d15f75, 2025-12-25)"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   width="512"
+   height="93.090912"
+   viewBox="0 0 512 93.090912"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview1"
-     pagecolor="#505050"
-     bordercolor="#ffffff"
-     borderopacity="1"
-     inkscape:showpageshadow="0"
-     inkscape:pageopacity="0"
-     inkscape:pagecheckerboard="1"
-     inkscape:deskcolor="#505050"
-     inkscape:zoom="0.92857143"
-     inkscape:cx="76.461538"
-     inkscape:cy="13.461538"
-     inkscape:window-width="1285"
-     inkscape:window-height="588"
-     inkscape:window-x="320"
-     inkscape:window-y="344"
-     inkscape:window-maximized="0"
-     inkscape:current-layer="svg1" />
   <defs
      id="defs1" />
   <g
      id="layer2"
-     transform="matrix(0.99846778,0,0,0.99846778,0.11798107,0.02145113)">
+     transform="matrix(3.3246753,0,0,3.3246753,2.3458737e-6,1.8988509e-6)">
     <g
-       id="g2"
+       id="g1"
        style="display:inline">
       <rect
          style="fill:#4485f4;fill-opacity:1;stroke-width:1.37006"
@@ -51,8 +29,8 @@
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Google Sans';-inkscape-font-specification:'Google Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-align:end;letter-spacing:-0.42px;writing-mode:lr-tb;direction:ltr;text-anchor:end;display:inline;fill:#195aba;fill-opacity:1"
          x="155.28401"
          y="19.599991"
-         id="text2-0"><tspan
-           id="tspan2-2"
+         id="text2"><tspan
+           id="tspan2"
            x="154.86401"
            y="19.599991"
            style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:16px;font-family:'Google Sans';-inkscape-font-specification:'Google Sans, Normal';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;fill:#195aba;fill-opacity:1">Inc.</tspan></text>
@@ -70,7 +48,7 @@
        id="layer1"
        style="display:inline">
       <path
-         id="rect2-4"
+         id="rect2"
          style="display:inline;fill:#4485f4;fill-opacity:1;stroke-width:1.02719"
          d="M 8.8105469,0 21.984375,14.5 v 0.816406 L 8.0234375,28 H 22.013672 22.1875 28 V 0 h -5.8125 -0.173828 z" />
       <path
